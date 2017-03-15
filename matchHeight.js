@@ -19,9 +19,10 @@ matchHeight = function(){
     };
     var setHeight = function(group){
       var maxHeight = getMaxHeight(group);
-      group.forEach(function(element){
-          element.style.height = maxHeight+"px";
-      })
+      if(group.length > 1)
+		  group.forEach(function(element){
+			  element.style.height = maxHeight+"px";
+		  })
     };
     grupedElements.forEach(function(grupe){
         grupe.forEach(setHeight);
